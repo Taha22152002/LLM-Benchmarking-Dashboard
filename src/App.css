@@ -1,0 +1,106 @@
+@reference "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌙 Global Theme Variables */
+:root {
+  --primary: #2563eb;
+  --secondary: #7c3aed;
+  --accent: #10b981;
+  --bg-dark: #0f172a;
+  --card-dark: #1e293b;
+}
+
+/* 🧩 Layout Reset and Centering */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 🪄 Page Background & Typography */
+body {
+  @apply min-h-screen bg-gradient-to-b from-[#0f172a] to-[#020617] text-slate-200 antialiased font-sans;
+}
+
+/* Root container (centers the app content) */
+#root {
+  @apply w-full max-w-7xl mx-auto px-6 py-10;
+}
+
+/* 🔷 Headings */
+h1,
+h2,
+h3 {
+  @apply font-bold text-white;
+}
+
+h1 {
+  @apply text-4xl mb-2;
+}
+
+h2 {
+  @apply text-2xl mb-4 border-b border-indigo-500/40 pb-2;
+}
+
+/* 🌫️ Card Components */
+.card {
+  @apply bg-[#0f172a]/60 backdrop-blur-lg rounded-2xl border border-[#1e293b]/40 shadow-[0_0_25px_rgba(56,189,248,0.1)] p-6 text-left;
+}
+
+/* 🟣 Buttons */
+.btn {
+  @apply font-semibold rounded-lg transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-[#2563eb] to-[#7c3aed] text-white shadow-lg shadow-blue-500/30 hover:shadow-purple-500/40;
+}
+
+.btn-secondary {
+  @apply bg-[#1e293b] text-gray-300 border border-[#334155] hover:bg-[#334155];
+}
+
+.btn-accent {
+  @apply bg-emerald-500 text-white shadow-lg shadow-emerald-500/30 hover:shadow-emerald-400/40;
+}
+
+/* 🔍 Input Fields */
+input[type="text"] {
+  @apply bg-[#1e293b]/70 border border-[#334155] rounded-lg px-4 py-2 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* 🌀 Logo Hover Effects */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em var(--primary));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em #61dafb);
+}
+
+/* ✨ Fade-in Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
