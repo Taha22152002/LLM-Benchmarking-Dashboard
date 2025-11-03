@@ -41,8 +41,8 @@ This is a custom-built dashboard application designed to provide **real-time, in
     npm install express node-fetch cors dotenv
     ```
 
-3.  **Create `.env` file:**
-    In the root of the project directory, create a file named **`.env`** and add your API key:
+3.  **Update `.env` file:**
+    In the root of the project directory, update a file named **`.env`** and add your API key:
 
     ```
     # .env
@@ -68,8 +68,9 @@ The frontend is a static application located in the `public/` folder (or whereve
 Or simply:
 
 ```bash
-    npm run dev
-    ```
+ npm run dev
+
+```
 
 -----
 
