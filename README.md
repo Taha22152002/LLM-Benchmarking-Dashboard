@@ -103,13 +103,3 @@ If you still encounter connection errors:
 3.  **Rate Limits:** Ensure you have not exceeded the limits on your free or commercial API tier.
 
 -----
-
-## 🤝 Contribution
-
-[Optional: If this is an open-source project, include a section here detailing how others can contribute, report bugs, or suggest features.]
-
------
-
-## ⚖️ License
-
-[Optional: Specify the license, e.g., MIT License.]
