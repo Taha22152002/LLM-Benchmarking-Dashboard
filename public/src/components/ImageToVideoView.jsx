@@ -32,7 +32,7 @@ export default function ImageToVideoView({ loading, error, sortConfig, handleSor
   return (
     <>
       <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 border-indigo-100">
-        🖼️➡️🎬 Image-to-Video Models — ELO Rankings
+        Image-to-Video Models — ELO Rankings
       </h2>
 
       <div className="overflow-x-auto border rounded-2xl shadow-lg bg-white border-gray-200">

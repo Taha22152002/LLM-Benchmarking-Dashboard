@@ -1,15 +1,12 @@
 // src/services/apiService.js
-const BASE_URL = "http://localhost:3000/api"; // your proxy endpoint (prevents CORS)
-const API_KEY = import.meta.env.VITE_ARTIFICIAL_ANALYSIS_KEY;
+const BASE_URL = "http://localhost:3000/api"; // backend endpoint (prevents CORS)
 
 const apiService = {
   /** ────────────────────────────────
    *  LLM MODELS
    *  ──────────────────────────────── */
   getLLMModels: async () => {
-    const res = await fetch(`${BASE_URL}/llms/models`, {
-      headers: { "x-api-key": API_KEY },
-    });
+    const res = await fetch(`${BASE_URL}/llms/models`);
     if (!res.ok) throw new Error("Failed to fetch LLM models");
 
     const json = await res.json();
@@ -43,9 +40,7 @@ const apiService = {
    *  TEXT → IMAGE MODELS
    *  ──────────────────────────────── */
   getTextToImage: async () => {
-    const res = await fetch(`${BASE_URL}/media/text-to-image`, {
-      headers: { "x-api-key": API_KEY },
-    });
+    const res = await fetch(`${BASE_URL}/media/text-to-image`);
     if (!res.ok) throw new Error("Failed to fetch Text-to-Image data");
 
     const json = await res.json();
@@ -64,9 +59,7 @@ const apiService = {
    *  IMAGE EDITING
    *  ──────────────────────────────── */
   getImageEditing: async () => {
-    const res = await fetch(`${BASE_URL}/media/image-editing`, {
-      headers: { "x-api-key": API_KEY },
-    });
+    const res = await fetch(`${BASE_URL}/media/image-editing`);
     if (!res.ok) throw new Error("Failed to fetch Image Editing data");
 
     const json = await res.json();
@@ -85,9 +78,7 @@ const apiService = {
    *  TEXT → SPEECH
    *  ──────────────────────────────── */
   getTextToSpeech: async () => {
-    const res = await fetch(`${BASE_URL}/media/text-to-speech`, {
-      headers: { "x-api-key": API_KEY },
-    });
+    const res = await fetch(`${BASE_URL}/media/text-to-speech`);
     if (!res.ok) throw new Error("Failed to fetch Text-to-Speech data");
 
     const json = await res.json();
@@ -106,9 +97,7 @@ const apiService = {
    *  TEXT → VIDEO
    *  ──────────────────────────────── */
   getTextToVideo: async () => {
-    const res = await fetch(`${BASE_URL}/media/text-to-video`, {
-      headers: { "x-api-key": API_KEY },
-    });
+    const res = await fetch(`${BASE_URL}/media/text-to-video`);
     if (!res.ok) throw new Error("Failed to fetch Text-to-Video data");
 
     const json = await res.json();
@@ -127,9 +116,7 @@ const apiService = {
    *  IMAGE → VIDEO
    *  ──────────────────────────────── */
   getImageToVideo: async () => {
-    const res = await fetch(`${BASE_URL}/media/image-to-video`, {
-      headers: { "x-api-key": API_KEY },
-    });
+    const res = await fetch(`${BASE_URL}/media/image-to-video`);
     if (!res.ok) throw new Error("Failed to fetch Image-to-Video data");
 
     const json = await res.json();
